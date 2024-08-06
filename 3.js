@@ -6,7 +6,8 @@ document.getElementById('registration-form').addEventListener('submit', async fu
   const numPeople = document.getElementById('numPeople').value;
 
   // QR code content
-  const qrCodeMessage = `Family Name: ${familyName}, Number of People: ${numPeople}`;
+  // Include the URL to redirect to in the QR code
+  const qrCodeMessage = `Family Name: ${familyName}, Number of People: ${numPeople}, URL: https://lbavly1.github.io/..1q1/invited-web.html`;
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(qrCodeMessage)}`;
 
   // Display QR code
